@@ -1,4 +1,4 @@
-import { Navigate, Outlet } from 'react-router-dom'
+import { Link, Navigate, Outlet } from 'react-router-dom'
 import  {useStateContext} from '../contexts/provider'
 import React from 'react'
 
@@ -11,10 +11,17 @@ export default function Guest() {
   // }
     
       return (
-        <div>
-          Guest
-          <Outlet />
-        </div>
+        <div id='guest'>
+      <aside>
+        <Link to ='/login' id='first_a'>Login</Link>
+        <Link to ='/signup'>Sign Up</Link>
+      </aside>
+      <main>
+      <Outlet />
+      </main>
+      
+    </div>
       )
+    
     
 }
