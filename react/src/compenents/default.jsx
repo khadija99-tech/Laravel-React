@@ -1,12 +1,18 @@
-import React, { Component } from 'react'
 import { Outlet } from 'react-router-dom'
-export default class Default extends Component {
-  render() {
-    return (
-      <div>
-        Default
-        <Outlet />
-      </div>
-    )
+
+import React from 'react'
+
+export default function Default() {
+  const {user, token} = useStateContext()
+
+  if (!token){
+    return <Navigate to ="/login"/>
   }
+  return (
+    <div>
+      Default
+          <Outlet />
+    </div>
+  )
 }
+
