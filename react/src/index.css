@@ -171,7 +171,7 @@ table > tbody > tr > td {
 }
 
 .login-signup-form .form .message a {
-    color: #5b08a7;
+    color: #EAE0F5;
     text-decoration: none;
 }
 
@@ -184,7 +184,7 @@ table > tbody > tr > td {
 
 #default aside {
     width: 240px;
-    background-color: #5b08a7;
+    background-color: #ddaddd;
     padding: 1rem
 }
 
@@ -192,7 +192,7 @@ table > tbody > tr > td {
     display: block;
     padding: 0.75rem 1rem;
     border-radius: 6px;
-    color: white;
+    color: black;
     text-decoration: none;
     transition: all 0.2s;
 }
@@ -241,3 +241,4 @@ table > tbody > tr > td {
         transform: translateY(0);
     }
 }
+

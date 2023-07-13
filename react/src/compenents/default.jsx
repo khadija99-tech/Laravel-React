@@ -11,20 +11,20 @@ export default function Default() {
   return (
     <div id='default'>
       <aside>
-        <Link to ='/dashboard'>Dashboard</Link>
-        <Link to ='/users'>User</Link>
+        <Link to ='/login'>Login</Link>
+        <Link to ='/signup'>Sign Up</Link>
       </aside>
 
       <div className='content'>
       <header>
         <div>
-           user info
+           {user.name}
         </div>
       </header>
       <main>
       <Outlet />
       </main>
-      
+
       </div>
       
     </div>

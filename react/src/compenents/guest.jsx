@@ -6,9 +6,9 @@ export default function Guest() {
   
   const {user,token} = useStateContext();
 
-  if (token){
-    return <Navigate to = '/users' />
-  }
+  // if (token){
+  //   return <Navigate to = '/users' />
+  // }
     
       return (
         <div>
