@@ -1,4 +1,4 @@
-import {createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Login from './Views/login';
 import Error from './Views/error';
 import Signup from './Views/signup';
@@ -7,40 +7,40 @@ import Guest from './compenents/guest';
 import Default from './compenents/default';
 import Dashboard from './Views/dashboard';
 
-const router = createBrowserRouter(  [
+const router = createBrowserRouter([
     {
         path: '/',
-        element: <Guest/>,
-        children : [
+        element: <Guest />,
+        children: [
             {
                 path: '/login',
                 element: <Login />
-            }, 
+            },
             {
-                path:'/signup',
+                path: '/signup',
                 element: <Signup />
             },
         ]
     },
     {
         path: '/',
-        element: <Default/>,
-        children : [
+        element: <Default />,
+        children: [
             {
-                path:'/users',
+                path: '/users',
                 element: <Users />
             },
             {
-                path:'/dashboard',
+                path: '/dashboard',
                 element: <Dashboard />
             },
         ]
     },
 
-{
-    path:'*',
-    element: <Error />
-}
+    {
+        path: '*',
+        element: <Error />
+    }
 ])
 
 export default router
