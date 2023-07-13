@@ -1,12 +1,20 @@
-import React, { Component } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
+import  {useStateContext} from '../contexts/provider'
+import React from 'react'
 
-export default class Guest extends Component {
-  render() {
-    return (
-      <div>
-        <Outlet />
-      </div>
-    )
+export default function Guest() {
+  
+  const {user,token} = useStateContext();
+
+  if (token){
+    return <Navigate to = '/users' />
   }
+    
+      return (
+        <div>
+          Guest
+          <Outlet />
+        </div>
+      )
+    
 }
