@@ -5,13 +5,13 @@ import Signup from './Views/signup';
 import Users from './Views/users';
 import Guest from './compenents/guest';
 import Default from './compenents/default';
-import { Children } from 'react';
+import Dashboard from './Views/dashboard';
 
 const router = createBrowserRouter(  [
     {
         path: '/',
         element: <Guest/>,
-        Children : [
+        children : [
             {
                 path: '/login',
                 element: <Login />
@@ -25,7 +25,7 @@ const router = createBrowserRouter(  [
     {
         path: '/',
         element: <Default/>,
-        Children : [
+        children : [
             {
                 path:'/users',
                 element: <Users />

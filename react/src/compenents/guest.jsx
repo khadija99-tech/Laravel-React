@@ -5,6 +5,7 @@ export default class Guest extends Component {
   render() {
     return (
       <div>
+        Guest
         <Outlet />
       </div>
     )
